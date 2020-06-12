@@ -1,0 +1,23 @@
+const ifNaN = new Promise((resolve,reject) => {
+    if(isNaN(dataScore[i]) == true) {
+  resolve(AlertIfNaN());
+  return;
+  };
+   });
+   const ifHack = new Promise((resolve,reject) => {
+    if (dataScore[i] > 10) {
+  resolve(AlertIfHack());
+  return;
+  };
+   });
+  
+  deleteAlert();
+  
+  document.getElementById("data").insertAdjacentHTML("beforeend", `
+                  <tr class='data'>
+                    <td>${a}</td>
+                    <td>${fullname}</td>
+                    <td class='score'>${dataScore[i]}</td>
+                    <td class='mean'>?</td>
+                  </tr>`);
+  }
